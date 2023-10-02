@@ -5,7 +5,14 @@ import { useOptionalUser } from "~/utils";
 
 export const meta: MetaFunction = () => [{ title: "Remix Notes" }];
 
-console.log("yoyo");
+const sayHelloToPerson = (person: { name: string }) => {
+  console.log(`Hello ${person.name}`);
+};
+
+sayHelloToPerson("Jon");
+
+const a = 5;
+
 export default function Index() {
   const user = useOptionalUser();
   return (
